@@ -1,0 +1,33 @@
+body{
+    width: 980px;
+    margin: 0 auto;
+}
+
+.anchor{
+    width: 500px;
+    height: 100px;
+    background-color: antiquewhite;
+    border-bottom: solid;
+    list-style: none;
+    margin: 0 auto;
+}
+.anchor p{
+    font-weight:bold;
+    padding: 20px 7px;
+    font-size:20px;
+    width: 80px;
+    display: inline-block;
+}
+
+.anchor p.name{
+    color: black;
+}
+
+
+.anchor p.votes{
+    color: #1c79c2;
+}
+
+.anchor p.rank{
+    color: crimson;
+}

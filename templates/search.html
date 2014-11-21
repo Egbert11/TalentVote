@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>搜索选手</title>
+</head>
+<body style="width: 980px; margin: 0 auto">
+<script type="text/javascript">
+function validateForm(){
+    var a=document.forms["Form"]["searchText"].value;
+    if (a==null || a==""){
+        alert("Please Fill All Required Field");
+         return false;
+    }
+}
+</script>
+<form action="searchResult" name="Form" onsubmit="return validateForm()" method="post">
+    <select name="searchType">
+        <option value="id">id</option>
+        <option value="nickname">昵称</option>
+        <option value="name">姓名</option>
+        <option value="phone">手机</option>
+    </select>
+    搜索内容:<input type="text" name="searchText">
+    <input type="submit" value="搜索">
+</form>
+
+</body>
+</html>

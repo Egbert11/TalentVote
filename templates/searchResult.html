@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>搜索结果显示</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/searchResult.css" />
+
+</head>
+<body>
+    <ul>
+        {% for anchor in anchorInfoArr %}
+        <li class = "anchor">
+            <p class="name" >{{anchor.name}}</p>
+            <p class="votes">{{anchor.votes}}票</p>
+            <p class="rank">第{{anchor.rank}}名</p>
+            <a href="{{ url_for('anchor', id = anchor.id)}}">显示更多信息...</a>
+            <form action="{{ url_for('vote', id = anchor.id)}}" method="post">
+                <input type="submit" value="投她一票">
+            </form>
+        </li>
+        {% endfor%}
+    </ul>
+
+
+
+</body>
+</html>

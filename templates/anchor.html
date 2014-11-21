@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>选手信息</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/showAll.css" />
+    <script language="javascript" type="text/javascript" src="../static/js/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+<div>
+    <form action="{{ url_for('vote', id = anchor.id) }}" method="post" name="vote">
+        <span class = "name">姓名：{{ anchor.name }}</span>
+        <span class = "nickname">昵称：{{ anchor.nickname }}</span>
+        <span class = "anchorId">ID：{{ anchor.id }}</span>
+        <span class = "phone">手机号：{{anchor.phone  }}</span>
+        <span class = "votes">得票数：{{ anchor.votes }}票</span>
+        <span class = "rank">排名：第{{ anchor.rank }}名</span>
+        <input type="submit" value="投她一票">
+    </form>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>更改选手信息</title>
+</head>
+<body style="width: 980px; margin: 0 auto">
+<script type="text/javascript">
+function validateForm(){
+    var a=document.forms["Form"]["id"].value;
+    var b=document.forms["Form"]["name"].value;
+    var c=document.forms["Form"]["nickname"].value;
+    var d=document.forms["Form"]["phone"].value;
+    if (a==null || a=="", b == null && b == "", c == null && c == "" , d == null && d == ""){
+        alert("Please Fill All Required Field");
+         return false;
+    }
+}
+</script>
+<form action="changeAnchorInfo" name = "Form" onsubmit="return validateForm()" method="POST">
+    id:<input type="text" name="id">
+    名字：<input type="text" name="name">
+    昵称：<input type="text" name="nickname">
+    手机：<input type="text" name="phone">
+    <input type="submit" value="更改">
+</form>
+
+</body>
+</html>
